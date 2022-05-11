@@ -30,23 +30,16 @@ function showHtml(element) {
   allButtons[previous].classList.add("btn");
   allButtons[current].classList.remove("btn");
   allButtons[current].classList.add("active");
-
   previous = current;
-
-  img.style.opacity = "0";
-  img.style.transform = "scale(0.8)";
-  par.style.transform = "scale(0.8)";
-  par.style.opacity = "0";
-
+  img.classList.add("disappear");
+  par.classList.add("disappear");
   setTimeout(() => {
     img.src = allImgs[element.id].src;
     par.innerHTML = allImgs[element.id].title;
-  }, 500);
+  }, 250);
 
   setTimeout(() => {
-    img.style.opacity = "1";
-    par.style.opacity = "1";
-    img.style.transform = "scale(1)";
-    par.style.transform = "scale(1)";
-  }, 550);
+    img.classList.remove("disappear");
+    par.classList.remove("disappear");
+  }, 400);
 }
