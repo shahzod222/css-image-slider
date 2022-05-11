@@ -33,11 +33,11 @@ function showHtml(element) {
   setTimeout(() => {
     img.src = allImgs[element.id].src;
     par.innerHTML = allImgs[element.id].title;
-    img.style.transform = "scale(1)";  
-    par.style.transform = "scale(1)"
   }, 500);
   setTimeout(() => {
     img.style.opacity = "1";
     par.style.opacity = "1";
-  }, 520);
+    img.style.transform = "scale(1)";  
+    par.style.transform = "scale(1)"
+  }, 540);
 }
