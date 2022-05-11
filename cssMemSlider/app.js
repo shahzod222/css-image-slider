@@ -27,12 +27,14 @@ function showHtml(element) {
   allButtons[element.id].classList.remove("btn");
   allButtons[element.id].classList.add("active");
   img.style.opacity = "0";
-  img.style.transform = "scale(0.9)";
+  img.style.transform = "scale(0.8)";
+  par.style.transform = "scale(0.8)";
   par.style.opacity = "0";
   setTimeout(() => {
-    img.style.transform = "scale(1)";
     img.src = allImgs[element.id].src;
     par.innerHTML = allImgs[element.id].title;
+    img.style.transform = "scale(1)";  
+    par.style.transform = "scale(1)"
   }, 500);
   setTimeout(() => {
     img.style.opacity = "1";
