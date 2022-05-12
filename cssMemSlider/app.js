@@ -36,10 +36,16 @@ function showHtml(element) {
   setTimeout(() => {
     img.src = allImgs[element.id].src;
     par.innerHTML = allImgs[element.id].title;
-  }, 250);
-
+  }, 150);
   setTimeout(() => {
     img.classList.remove("disappear");
     par.classList.remove("disappear");
-  }, 400);
+    img.classList.add("appear");
+    par.classList.add("appear");
+  }, 300);
+
+  setTimeout(() => {
+    img.classList.remove("appear");
+    par.classList.remove("appear");
+  }, 600);
 }
