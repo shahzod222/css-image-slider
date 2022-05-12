@@ -1,3 +1,11 @@
+let screenSize = screen.width;
+window.addEventListener(
+  "resize",
+  () => {
+    screenSize = this.screen.width;
+  },
+  true
+);
 let par = document.querySelector(".text");
 let img = document.querySelector(".img");
 let allImgAssets = [
@@ -31,7 +39,11 @@ function showHtml(element) {
   par.style.opacity = "0";
   setTimeout(() => {
     img.style.background = `url(${allImgAssets[current].src}) no-repeat`;
-    img.style.backgroundSize = "cover";
+    if (screenSize > 480) {
+      img.style.backgroundSize = "70vw 80vh";
+    } else {
+      img.style.backgroundSize = "85vw 35vh";
+    }
     par.innerHTML = allImgAssets[current].title;
   }, 400);
   setTimeout(() => {

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-/* Size for devices are: 1440*900 - for Noutbook and 425*568 for Mobile */
+/* Size for Shahzod's devices are: 1325*650 - for Noutbook and 480*850 for Mobile */
 html,
 body {
   background-color: #363945;
@@ -25,7 +25,7 @@ body {
 }
 .img {
   background: url("assets/bmw.jpg") no-repeat;
-  background-size: cover;
+  background-size: 70vw 80vh;
   width: 70vw;
   height: 80vh;
   margin-bottom: 2%;
@@ -76,7 +76,7 @@ body {
 .active:hover {
   border-color: #a09998;
 }
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .container {
     max-width: 85vw;
   }
@@ -91,8 +91,9 @@ body {
     font-size: 1.5rem;
   }
   .img {
+    background-size: 85vw 35vh;
     width: 85vw;
-    height: 50vh;
+    height: 35vh;
     margin-bottom: 0;
   }
   .btn,
