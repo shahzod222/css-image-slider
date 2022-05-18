@@ -22,7 +22,7 @@ body {
   height: 80%;
 }
 .container input {
-  display: none;
+  visibility: hidden;
 }
 .img {
   min-width: 100%;
@@ -61,9 +61,12 @@ body {
   margin: 3px;
   cursor: pointer;
 }
+.buttons label:active .radio {
+  background-color: #DFCFBE;
+}
 .buttons label:hover .radio,
 .radio:hover {
-  background-color: #a09998;
+  transform: scale(1.1);
 }
 #img1:checked ~ .images > .m1,
 #img1:checked ~ .controls > .titles > .t1 {
