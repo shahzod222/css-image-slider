@@ -1,84 +1,142 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 /* Size for Shahzod's devices are: 1325*650 - for Noutbook and 480*850 for Mobile */
-html,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: #363945;
-  width: 100%;
-  height: 100%;
-  margin: 0;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .container {
-  max-width: 70vw;
+  width: 70%;
+  overflow: hidden;
+}
+.images {
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+.container input {
+  display: none;
+}
+.img {
+  min-width: 100%;
+  transition: 0.4s ease-in-out;
+  border-radius: 20px;
+}
+.text {
+  transition: 0.4s ease-in-out;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  color: #939597;
+  min-width: 100%;
+}
+.titles {
+  display: flex;
+  width: 50%;
+  overflow: hidden;
 }
 .controls {
+  margin-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .buttons {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-.img {
-  background: url("assets/bmw.jpg") no-repeat;
-  background-size: 70vw 80vh;
-  width: 70vw;
-  height: 80vh;
-  margin-bottom: 2%;
-  transition: 0.4s ease;
-  border: 1px solid white;
-  border-radius: 20px;
+.buttons label {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+  cursor: pointer;
 }
-.text {
-  transition: 0.4s ease;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
-  color: #939597;
+.buttons label:hover .radio,
+.radio:hover {
+  background-color: #a09998;
 }
-.btn-wrapper {
-  width: 2.2rem;
-  height: 2.2rem;
-  margin: 0 2px;
+#img1:checked ~ .images > .m1,
+#img1:checked ~ .controls > .titles > .t1 {
+  margin-left: 0;
+}
+#img1:checked ~ .controls > .buttons > label > a > .c1 {
+  opacity: 1;
+}
+#img2:checked ~ .images > .m2,
+#img2:checked ~ .controls > .titles > .t1 {
+  margin-left: -100%;
+}
+#img2:checked ~ .controls > .buttons > label > a > .c2 {
+  opacity: 1;
+}
+#img3:checked ~ .images > .m3,
+#img3:checked ~ .controls > .titles > .t1 {
+  margin-left: -200%;
+}
+#img3:checked ~ .controls > .buttons > label > a > .c3 {
+  opacity: 1;
+}
+#img4:checked ~ .images > .m4,
+#img4:checked ~ .controls > .titles > .t1 {
+  margin-left: -300%;
+}
+#img4:checked ~ .controls > .buttons > label > a > .c4 {
+  opacity: 1;
+}
+#img5:checked ~ .images > .m5,
+#img5:checked ~ .controls > .titles > .t1 {
+  margin-left: -400%;
+}
+#img5:checked ~ .controls > .buttons > label > a > .c5 {
+  opacity: 1;
+}
+.circle {
+  width: 1rem;
+  height: 1rem;
+  background-color: #363945;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.radio {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #edf1ff;
+  cursor: pointer;
+  transition: 0.35s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  transition: 0.3s ease;
 }
-.btn,
-.active {
-  width: 1.3rem;
-  height: 1.3rem;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transition: 0.3s ease;
-}
-.btn {
-  background-color: #edf1ff;
-}
-.active {
-  border: 3px solid #edf1ff;
-  background-color: #282d3c;
-}
-.btn-wrapper:hover .btn,
-.btn:hover {
-  background-color: #a09998;
-}
-.btn-wrapper:hover .active,
-.active:hover {
-  border-color: #a09998;
-}
+
 @media (max-width: 480px) {
+  .buttons{
+    margin: 10px 0;
+  }
   .container {
-    max-width: 85vw;
+    width: 85%;
+  }
+  .radio{
+    width: 2rem;
+    height: 2rem;
+  }
+  .buttons label{
+    margin: 0 7px;
+  }
+  .circle{
+    width: 1.4rem;
+    height: 1.4rem;
   }
   .controls {
     display: flex;
@@ -87,23 +145,15 @@ body {
     justify-content: center;
   }
   .text {
-    margin-right: auto;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
+  }
+  .titles{
+    width: 100%;
   }
   .img {
     background-size: 85vw 35vh;
     width: 85vw;
     height: 35vh;
     margin-bottom: 0;
-  }
-  .btn,
-  .active {
-    width: 1.1rem;
-    height: 1.1rem;
-  }
-  .btn-wrapper {
-    width: 1.7rem;
-    height: 1.7rem;
-    margin: 0.7rem 3px;
   }
 }

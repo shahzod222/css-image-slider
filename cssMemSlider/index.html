@@ -10,25 +10,42 @@
   </head>
   <body>
     <div class="container">
-      <img alt="" class="img" />
+      <input type="radio" name="images" id="img1" checked />
+      <input type="radio" name="images" id="img2" />
+      <input type="radio" name="images" id="img3" />
+      <input type="radio" name="images" id="img4" />
+      <input type="radio" name="images" id="img5" />
+      <div class="images">
+        <img class="img m1" src="assets/bmw.jpg" />
+        <img class="img m2" src="assets/cadillac.jfif" />
+        <img class="img m3" src="assets/mers.jfif" />
+        <img class="img m4" src="assets/tesla.jpg" />
+        <img class="img m5" src="assets/tahoe.jpg" />
+      </div>
       <div class="controls">
-        <p class="text">BMW X5</p>
+        <div class="titles">
+          <p class="t1 text">BMW X5</p>
+          <p class="t2 text">Cadillac Escalade</p>
+          <p class="t3 text">Mercedes-Benz G-Class</p>
+          <p class="t4 text">Tesla Model X</p>
+          <p class="t5 text">Chevrolet Tahoe</p>
+        </div>
         <div class="buttons">
-          <div class="btn-wrapper" id="0">
-            <button name="btn" class="active" id="0"></button>
-          </div>
-          <div class="btn-wrapper" id="1">
-            <button name="btn" class="btn" id="1"></button>
-          </div>
-          <div class="btn-wrapper" id="2">
-            <button name="btn" class="btn" id="2"></button>
-          </div>
-          <div class="btn-wrapper" id="3">
-            <button name="btn" class="btn" id="3"></button>
-          </div>
-          <div class="btn-wrapper" id="4">
-            <button name="btn" class="btn" id="4"></button>
-          </div>
+          <label for="img1"
+            ><a class="radio"><span class="c1 circle"></span></a
+          ></label>
+          <label for="img2"
+            ><a class="radio"><span class="c2 circle"></span></a
+          ></label>
+          <label for="img3"
+            ><a class="radio"><span class="c3 circle"></span></a
+          ></label>
+          <label for="img4"
+            ><a class="radio"><span class="c4 circle"></span></a
+          ></label>
+          <label for="img5"
+            ><a class="radio"><span class="c5 circle"></span></a
+          ></label>
         </div>
       </div>
     </div>
