@@ -27,7 +27,7 @@ body {
 .img {
   min-width: 100%;
   transition: 0.7s ease;
-  border-radius: 20px;
+  border-radius: 3%;
 }
 .text {
   transition: 0.7s ease;
@@ -42,7 +42,7 @@ body {
   overflow: hidden;
 }
 .controls {
-  margin-top: 5px;
+  margin-top: 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,11 +58,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3px;
+  margin: 3%;
   cursor: pointer;
 }
 .buttons label:active .radio {
-  background-color: #DFCFBE;
+  background-color: #dfcfbe;
 }
 .buttons label:hover .radio,
 .radio:hover {
@@ -123,9 +123,9 @@ body {
   align-items: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .buttons {
-    margin: 10px 0;
+    margin: 4% 0;
   }
   .container {
     width: 85%;
@@ -135,7 +135,7 @@ body {
     height: 2rem;
   }
   .buttons label {
-    margin: 0 7px;
+    margin: 0 3%;
   }
   .circle {
     width: 1.4rem;
@@ -154,9 +154,7 @@ body {
     width: 100%;
   }
   .img {
-    background-size: 85vw 35vh;
     width: 85vw;
-    height: 35vh;
-    margin-bottom: 0;
+    height: 33vh;
   }
 }
