@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+/* Size for Shahzod's devices are: 1325*650 - for Noutbook and 480*850 for Mobile */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #363945;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 70%;
+  overflow: hidden;
+}
+.images {
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+.container input {
+  visibility: hidden;
+}
+.img {
+  min-width: 100%;
+  transition: 0.7s ease;
+  border-radius: 3%;
+}
+.text {
+  transition: 0.7s ease;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  color: #939597;
+  min-width: 100%;
+}
+.titles {
+  display: flex;
+  width: 50%;
+  overflow: hidden;
+}
+.controls {
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons label {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3%;
+  cursor: pointer;
+}
+.buttons label:active .radio {
+  background-color: #dfcfbe;
+}
+.buttons label:hover .radio,
+.radio:hover {
+  transform: scale(1.1);
+}
+#img1:checked ~ .images > .m1,
+#img1:checked ~ .controls > .titles > .t1 {
+  margin-left: 0;
+}
+#img1:checked ~ .controls > .buttons > label > a > .c1 {
+  opacity: 1;
+}
+#img2:checked ~ .images > .m1,
+#img2:checked ~ .controls > .titles > .t1 {
+  margin-left: -100%;
+}
+#img2:checked ~ .controls > .buttons > label > a > .c2 {
+  opacity: 1;
+}
+#img3:checked ~ .images > .m1,
+#img3:checked ~ .controls > .titles > .t1 {
+  margin-left: -200%;
+}
+#img3:checked ~ .controls > .buttons > label > a > .c3 {
+  opacity: 1;
+}
+#img4:checked ~ .images > .m1,
+#img4:checked ~ .controls > .titles > .t1 {
+  margin-left: -300%;
+}
+#img4:checked ~ .controls > .buttons > label > a > .c4 {
+  opacity: 1;
+}
+#img5:checked ~ .images > .m1,
+#img5:checked ~ .controls > .titles > .t1 {
+  margin-left: -400%;
+}
+#img5:checked ~ .controls > .buttons > label > a > .c5 {
+  opacity: 1;
+}
+.circle {
+  width: 1rem;
+  height: 1rem;
+  background-color: #363945;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.radio {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #edf1ff;
+  cursor: pointer;
+  transition: 0.35s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    margin: 4% 0;
+  }
+  .container {
+    width: 85%;
+  }
+  .radio {
+    width: 2rem;
+    height: 2rem;
+  }
+  .buttons label {
+    margin: 0 3%;
+  }
+  .circle {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .controls {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .text {
+    font-size: 2.2rem;
+  }
+  .titles {
+    width: 100%;
+  }
+  .img {
+    width: 85vw;
+    height: 33vh;
+  }
+}
